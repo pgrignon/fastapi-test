@@ -9,13 +9,14 @@ app = FastAPI()
 
 logger = logging.getLogger(__name__)
 logger.setLevel(10)
-# logger.addHandler(AzureLogHandler(connection_string='InstrumentationKey=<YOUR_KEY>'))
+logger.addHandler(AzureLogHandler(connection_string='InstrumentationKey=a6ab8d1e-de0e-4a99-a0a8-9ac31a215ecd'))
 
 headers = {
-    "Ocp-Apim-Subscription-Key": "e16626ed2cfd4d87ae51fffbee899079",
+    "Ocp-Apim-Subscription-Key": "83a00384bd1a4a2b8319628ccf41029e",
     "Content-Type": "application/json",
     "Accept": "application/json"
 }
+
 
 class Model(BaseModel):
     text_to_analyze: list
